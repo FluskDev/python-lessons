@@ -16,3 +16,15 @@ class Creature:
             f"Creature(pos=({self.x},{self.y})),"
             f"energy={self.energy:.1f}, age{self.age})"
         )
+    
+    def tick(self) -> None:
+        self.age += 1
+        size = self.genes.get("size",1.0)
+        self.energy -= size
+        if self.energy < 0:
+            self._alive = False
+
+    def food(self,food_value:float) -> None:
+        gain = food_value * 30
+        self.energy = min(200.0, self.energy+gain)
+        
