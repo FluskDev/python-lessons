@@ -23,13 +23,13 @@ def test_tick():
     c = Creature(x=0, y=0, genes={"size": 2.0})
     c.tick()
     assert c.age == 1
-    assert c.energy == 98.0  # size = 2.0 -> минус 2.0
+    assert c.energy == 98.0  
 
 
 def test_eat():
     c = Creature(x=0, y=0, genes={})
     c.eat(1.0)
-    assert c.energy == 130.0  # еда 1.0 -> плюс 30 энергии
+    assert c.energy == 130.0  
 
 
 def test_can_reproduce():
