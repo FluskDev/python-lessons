@@ -23,5 +23,3 @@ class World:
     @property
     def alive_creatures(self):
         return [c for c in self.creatures if c.is_alive]
-
-    
