@@ -26,9 +26,9 @@ def test_tick():
     assert c.energy == 98.0  
 
 
-def test_eat():
+def test_food():
     c = Creature(x=0, y=0, genes={})
-    c.eat(1.0)
+    c.food(1.0)
     assert c.energy == 130.0  
 
 
